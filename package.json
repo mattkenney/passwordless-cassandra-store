@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cassandra-driver": "^3.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "passwordless-tokenstore-test": "^0.1.4"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --exit --timeout=9000"
+  }
+}
