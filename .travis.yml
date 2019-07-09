@@ -2,7 +2,9 @@ dist: xenial
 language: node_js
 node_js:
   - "11"
-cache: npm
+cache:
+  apt: true
+  npm: true
 before_install:
   - curl https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
   - echo "deb http://www.apache.org/dist/cassandra/debian 311x main" |

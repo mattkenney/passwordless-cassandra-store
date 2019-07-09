@@ -2,10 +2,10 @@
   "private": true,
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "cassandra-driver": "^3.5.0"
+    "cassandra-driver": "^4.1.0"
   },
   "devDependencies": {
-    "mocha": "^5.2.0",
+    "mocha": "^6.1.4",
     "passwordless-tokenstore-test": "^0.1.4"
   },
   "scripts": {
