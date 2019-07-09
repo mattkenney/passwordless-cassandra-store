@@ -12,3 +12,4 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install cassandra
   - sudo service cassandra start
+  - sudo netstat -lntp
