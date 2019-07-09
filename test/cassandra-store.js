@@ -2,11 +2,14 @@ const cassandra = require('cassandra-driver');
 const standardTests = require('passwordless-tokenstore-test');
 const CassandraStore = require('../index');
 
-const options = {
+const initialOptions = {
   contactPoints: ['localhost'],
-  keyspace: 'test',
   localDataCenter: 'datacenter1'
 };
+
+const options = Object.assign({}, initialOptions, {
+  keyspace: 'test'
+});
 
 function tokenStoreFactory() {
   return new CassandraStore(options);
@@ -22,7 +25,7 @@ function afterEachTest(done) {
 }
 
 it('create test keyspace', function (done) {
-  const client = new cassandra.Client(options);
+  const client = new cassandra.Client(initialOptions);
   client.execute(`
       CREATE KEYSPACE IF NOT EXISTS test
         WITH REPLICATION = {
