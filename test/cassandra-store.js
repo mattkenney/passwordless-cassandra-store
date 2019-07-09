@@ -4,7 +4,8 @@ const CassandraStore = require('../index');
 
 const options = {
   contactPoints: ['localhost'],
-  keyspace: 'test'
+  keyspace: 'test',
+  localDataCenter: 'datacenter1'
 };
 
 function tokenStoreFactory() {
