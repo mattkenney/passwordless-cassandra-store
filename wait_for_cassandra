@@ -1,0 +1,17 @@
+#!/bin/sh
+tries=9
+delay=10
+try=1
+while : ; do
+  if nc -z localhost 9042; then
+    echo "cassandra is running"
+    break
+  fi
+  if [ $try -ge $tries ]; then
+    echo "failed waiting for cassandra"
+    break
+  fi
+  echo "waiting for cassandra ($try)"
+  sleep $delay
+  try=$(( $try + 1 ))
+done

@@ -11,5 +11,5 @@ before_install:
     sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
   - sudo apt-get update
   - sudo apt-get install cassandra
-  - ps -Feww
-  - tail /var/log/cassandra
+before_script:
+  - ./wait_for_cassandra
