@@ -1,0 +1,5 @@
+dist: xenial
+language: node_js
+cache: npm
+services:
+  - cassandra
