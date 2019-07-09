@@ -22,7 +22,7 @@ function afterEachTest(done) {
 }
 
 it('create test keyspace', function (done) {
-  const client = new cassandra.Client({ contactPoints: ['localhost'] });
+  const client = new cassandra.Client(options);
   client.execute(`
       CREATE KEYSPACE IF NOT EXISTS test
         WITH REPLICATION = {
