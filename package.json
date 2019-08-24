@@ -1,5 +1,8 @@
 {
-  "private": true,
+  "name": "passwordless-cassandra-store",
+  "description": "Apache Cassandra token store for https://github.com/florianheinemann/passwordless",
+  "repository": "mattkenney/passwordless-cassandra-store",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cassandra-driver": "^4.1.0"
