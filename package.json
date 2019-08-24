@@ -1,5 +1,6 @@
 {
   "name": "passwordless-cassandra-store",
+  "version": "0.1.0",
   "description": "Apache Cassandra token store for https://github.com/florianheinemann/passwordless",
   "repository": "mattkenney/passwordless-cassandra-store",
   "license": "MIT",
